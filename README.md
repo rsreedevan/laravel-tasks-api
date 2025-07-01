@@ -8,7 +8,7 @@ This project is a Laravel 11 Restfull API using Sanctum for Authentication, Dock
 [Docker Compose] https://docs.docker.com/compose/
 
 ### Clone the repository 
-git clone <repo>
+git clone https://github.com/rsreedevan/laravel-tasks-api.git
 
 ## Run the application 
 Run the following command in the terminal 
