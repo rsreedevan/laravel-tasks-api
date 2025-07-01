@@ -56,15 +56,22 @@ Get Authenticated User
 
 
 ### Authentication Not Required 
-Register New User: POST /api/register  
+Register New User: POST /api/register 
+ 
 Login: POST /api/login 
 
 ### Authentication Required 
-Get Current User: GET /api/users 
-Logout User:  POST /api/logout 
+Get Current User: GET /api/users
+
+Logout User:  POST /api/logout
+
 Create a Task: POST /api/tasks 
+
 List All Tasks: GET /api/tasks 
+
 Get Details of a Task: GET api/tasks/{id}
+
 Update a task: PUT api/tasks/{id}
+
 Delete a task: DELETE api/tasks/{id}
 
