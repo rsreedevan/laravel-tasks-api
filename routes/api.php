@@ -8,11 +8,10 @@ use App\Http\Controllers\TaskController;
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
 
-
-    Route::get('/user', function (Request $request) {
+Route::get('/user', function (Request $request) {
     return $request->user();
     })->middleware('auth:sanctum');
 
 
-    Route::middleware('auth:sanctum')->apiResource('tasks', TaskController::class)
+Route::middleware('auth:sanctum')->apiResource('tasks', TaskController::class)
         ->only(['index', 'store', 'show', 'update', 'destroy']);

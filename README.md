@@ -12,13 +12,13 @@ git clone https://github.com/rsreedevan/laravel-tasks-api.git
 
 ## Run the application 
 Run the following command in the terminal 
-docker --compose up --build 
+docker compose up --build 
 
 Then run the migrations inside the app container 
 
 docker exec -it laravel-tasks-api php artisan migrate 
 
-The application should be start working by now. Check by visitng the url http://localhost:8080
+The application should be start working by now. Check by visitng the url http://localhost:80
 
 
 ## Authentication 
@@ -38,17 +38,17 @@ Response
 ## Test the API 
 
 Register 
-    curl -X POST http://localhost:8080/api/register \
+    curl -X POST http://localhost:80/api/register \
     -H "Content-Type: application/json" \
     -d '{"name":"Test user", "email":"user@example.com", "password";"password"}'
 
 Login 
-    curl -X POST http://localhost:8080/api/login \
+    curl -X POST http://localhost:80/api/login \
     -H "Content-Type: application/json" \
     -d '{"email":"user@example.com", "password";"password"}'
 
 Get Authenticated User 
-     curl -X GET http://localhost:8080/api/user \
+     curl -X GET http://localhost:80/api/user \
     -H "Authorization: Bearer your-token-here" \
     
 
@@ -57,7 +57,7 @@ Get Authenticated User
 
 ### Authentication Not Required 
 Register New User: POST /api/register 
- 
+
 Login: POST /api/login 
 
 ### Authentication Required 
